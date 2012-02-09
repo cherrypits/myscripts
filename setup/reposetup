@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -x
+sudo apt-get install curl git-core
+
+# install repo command
+mkdir -p ~/bin
+curl http://easource.alm.mentorg.com/git/mel/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+
+# install hub command
+mkdir -p ~/bin
+curl http://easource.alm.mentorg.com/git/mel/hub > ~/bin/hub
+chmod a+x ~/bin/hub
+
+# configure the hub tool
+git config --global --add hub.host github.alm.mentorg.com
+git config --global github."github.alm.mentorg.com".user jcherry
+git config --global github."github.alm.mentorg.com".token c58e75303c3018e81f843855429d82dc
